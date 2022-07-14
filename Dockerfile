@@ -29,7 +29,7 @@ COPY . ./src/beit_seg
 
 RUN pip3 install ./src/beit_seg && \
     : "Install the model" && \
-    python3 -c "from transformers import AutoFeatureExtractor; AutoFeatureExtractor.from_pretrained('${MODEL_NAME}')" && \
+    python3 -c "from transformers import AutoFeatureExtractor, BeitForSemanticSegmentation; AutoFeatureExtractor.from_pretrained('${MODEL_NAME}'); BeitForSemanticSegmentation.from_pretrained('${MODEL_NAME}')" && \
     colcon build
 
 ENTRYPOINT ["/home/shade/beit_seg/start.sh"]
