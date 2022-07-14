@@ -3,9 +3,11 @@
 <package format="3">
   <name>beit_seg</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>BEiT takes the traditional NLP transformer BERT and trains it for the image classification and segmentation tasks. 
+  It does this by creating visual tokens and "tokenizes" the image. 
+  The results achieve competitive results and can be used for image classification in this registry.</description>
   <maintainer email="support@shaderobotics.com">Shade Robotics</maintainer>
-  <license>TODO: License declaration</license>
+  <license>apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
