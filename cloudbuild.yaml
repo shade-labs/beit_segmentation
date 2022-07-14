@@ -11,6 +11,8 @@ steps:
     entrypoint: 'bash'
     args: ['-c', 'docker push $$USERNAME/beit-segmentation:${_ROS_VERSION}-${_TAG}']
     secretEnv: ['USERNAME']
+options:
+  machineType: 'N1_HIGHCPU_8'
 availableSecrets:
   secretManager:
     - versionName: projects/shade-prod/secrets/DOCKER_PASSWORD_SECRET_NAME/versions/1
